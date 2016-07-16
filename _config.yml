@@ -42,7 +42,7 @@ url: "https://Denon.github.io"
 
 # Change this to your base URL starting with forward slash if site is in gh-pages branch
 # For example /branchName
-baseurl: /gh-pages
+baseurl: 
 
 # Change this to your google analytics ID
 google_analytics:
