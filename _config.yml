@@ -4,27 +4,27 @@
 ##########################################
 
 # Set this for Copyright in the footer
-owner: Name Surname
+owner: Wu Dahong
 
 # Optional quote in the footer
 # To disable set enable to false
 quote:
-  enable: true
+  enable: False
   quote: Some fancy quote.
   author: John Doe
 
 # Set this to your main site title
 # In the head - ff page doesnt have its own title,
 # Site title will be used instead
-title: Aliquam Theme - Author Dennis Grinch
+title: Denon's Blog
 
 # Description and title below nav in the header
 punch-line: true
 
 # Your logo for the header
 logo:
-  title: John Doe
-  subtitle: Designer & Developer
+  title: 吴达鸿
+  subtitle: Python Developer
 
 include:
   - pages
@@ -38,11 +38,11 @@ disqus:
 
 # Set your host if deployed not locally
 # For example "https://yourGitHub.github.io"
-url:
+url: "https://Denon.github.io"
 
 # Change this to your base URL starting with forward slash if site is in gh-pages branch
 # For example /branchName
-baseurl:
+baseurl: /gh-pages
 
 # Change this to your google analytics ID
 google_analytics:
