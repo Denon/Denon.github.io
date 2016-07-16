@@ -4,7 +4,7 @@ title: About
 description: More information about me and this website.
 ---
 
-I am ...
+I am a Python Developer, living in Shang Hai Now.
 
 ## My skills
 
