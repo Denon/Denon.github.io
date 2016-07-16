@@ -50,6 +50,13 @@ google_analytics:
 # Contact form pupublic key
 contact_PK:
 
+defaults:
+  -
+    scope:
+      path: "tags"
+    values:
+      layout: "tag"
+      description: ""
 ##########################################
 #          Optional variables
 ##########################################
