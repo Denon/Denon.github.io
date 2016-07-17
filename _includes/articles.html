@@ -3,7 +3,11 @@
         {% include title.html %}
         {% include post_meta.html %}
     </header>
+    {% if page.excerpt %}
+    <p>{{ page.excerpt | strip_html | truncatewords: site.truncate_size | remove: '<p>' | remove: '</p>' }}
+    {% else %} 
     <p>{{ page.content | strip_html | truncatewords: site.truncate_size | remove: '<p>' | remove: '</p>' }}
+    {% endif  %}
     <a class="link-to-post"
        href="{{ site.baseurl }}{{ page.url }}">&raquo;</a>
     </p>
