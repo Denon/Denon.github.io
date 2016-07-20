@@ -44,6 +44,10 @@ url: "https://Denon.github.io"
 # For example /branchName
 baseurl: 
 
+assets:
+  sources:
+    - _assets/fonts
+
 # Change this to your google analytics ID
 google_analytics:
 
