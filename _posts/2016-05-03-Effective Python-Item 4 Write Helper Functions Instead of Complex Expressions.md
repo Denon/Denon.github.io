@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Effective Python-Item 4 Write Helper Functions Instead of Complex Expressions
+title: "Effective Python-Item 4: Write Helper Functions Instead of Complex Expressions"
 tags:
     - python
 excerpt: 《Effective Python》的读书笔记, 有些时候, 与其写一个很复杂的表达式, 还不如写一个 helper 函数来得清晰明了.

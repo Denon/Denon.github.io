@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Effective Python-Item 5: Know How to Slice Sequences
+title: "Effective Python-Item 5: Know How to Slice Sequences"
 tags:
     - python
 excerpt: 《Effective Python》的读书笔记, Python 切片的一些特性

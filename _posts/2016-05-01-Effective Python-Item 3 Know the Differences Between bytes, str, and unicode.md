@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Effective Python-Item 3 Know the Differences Between bytes, str, and unicode
+title: "Effective Python-Item 3: Know the Differences Between bytes, str, and unicode"
 tags:
     - python
 excerpt: 《Effective Python》的读书笔记, 比较在 python2 和 python3 中各种字符类型的区别
