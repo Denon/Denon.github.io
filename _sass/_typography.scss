@@ -1,188 +1,141 @@
-/*************************************************************************
-                             TEXT ALIGNMENT
-/*************************************************************************/
+/* ==========================================================================
+   Typography
+   ========================================================================== */
 
-//---------------------------ALIGN CENTER
-.punch-line,
-#main-nav li,
-.paginator ul,
-#footer-quote,
-#footer-main {
-  text-align: center;
-}
+/* 
+   Body
+   ========================================================================== */
 
-//----------------------------ALIGN RIGHT
-.highlighter-header,
-blockquote footer {
-  text-align: right;
-}
-
-//----------------------------STYLE ITALIC
-.punch-line,
-.post-meta,
-figcaption {
-  font-style: italic;
-}
-
-#footer-main {
-  @include init-con-font();
-}
-
-//----------------------------MISC
-sup {
-  vertical-align: super;
-}
-
-sub {
-  vertical-align: sub;
-}
-
-/*************************************************************************
-                             TEXT TRANSFORM
-/*************************************************************************/
-
-//----------------------------UPPERCASE
-.contact-form input[type="submit"],
-#logo-name,
-abbr {
-  text-transform: uppercase;
-}
-
-//----------------------------LOWERCASE
-#tag-line,
-h3 {
-  text-transform: lowercase;
-}
-
-//----------------------------SMALL-CAPS
-#tag-line,
-h3 {
-  font-variant: small-caps;
-}
-
-
-
-/*************************************************************************
-                              FONT SIZE
-/*************************************************************************/
-
-html {
-  font-size: 16px;
-}
-
-//----------------------------1-REM
-.contact-form input,
-.contact-form textarea {
-  font-size: $f-s-M !important;
-}
-//----------------------------2-REM
-h1 {
-  font-size: $f-s-2M;
-}
-
-//----------------------------1.5-REM
-#main-nav,
-h2 {
-  font-size: $f-s-1-5M;
-}
-
-//----------------------------1.25-REM
-h3, #footer-quote{
-  font-size: $f-s-1-25M;
-}
-
-#logo-name {
-  font-size: 1.5rem;
-}
-
-//----------------------------SMALL
-small, figcaption, sub, sup {
-  font-size: $f-s-S;
-}
-
-//----------------------------SMALLER
-abbr {
-  font-size: smaller;
-}
-
-.punch-line h1 {
-  font-size: 2.55rem;
-}
-
-
-/*************************************************************************
-                              LINE-HEIGHT
-/*************************************************************************/
-
-//----------------------------1.5
 body {
-  line-height: $l-h-M;
+	font-family: $base-font;
+	color: $text-color;
 }
 
-//----------------------------1.25
-h1, h2, h3 {
-  line-height: $l-h-1-25;
+/* 
+   Headings
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $heading-font;
 }
 
-//----------------------------MISC
-small, figcaption {
-  line-height: 2.1;
+h1 {
+	@include font-rem(28);
+
+	@media #{$medium} {
+		@include font-rem(32);
+	}
 }
 
-.highlight,
-#footer-quote {
-  line-height: 1.4;
+/* 
+   Links
+   ========================================================================== */
+
+a { 
+	text-decoration: none;
+	color: $link-color; 
+
+	&:visited { 
+		color: lighten($link-color, 20); 
+	}
+
+	&:hover { 
+		color: darken($link-color, 20); 
+	}
+
+	&:focus { 
+		outline: thin dotted; 
+		color: darken($link-color, 20);
+	}
+
+	&:hover, 
+	&:active { 
+		outline: 0; 
+	}
 }
 
-.contact-form input,
-.contact-form textarea{
-  line-height: 1.153;
+.link-arrow {
+	font-weight: 100;
+	text-decoration: underline;
+	font-style: normal;
 }
 
-#logo {
-  line-height: 1.1;
+/* 
+   Captions
+   ========================================================================== */
+
+figcaption {
+	padding-top: 10px;
+	@include font(14);
+	line-height: 1.3;
+	color: lighten($text-color, 10);
 }
 
-#tag-line {
-  line-height: 1rem;
+/* 
+   Notices
+   ========================================================================== */
+
+.notice {
+	margin-top: 1.5em;
+	padding: .5em 1em;
+	text-indent: 0;
+	@include font-rem(14);
+	background-color: $body-color;
+	border: 1px solid darken($body-color,20);
+	border-radius: 3px;
 }
 
+/* 
+   Blockquotes
+   ========================================================================== */
 
-/*************************************************************************
-                              FONT-FAMILY
-/*************************************************************************/
+blockquote {
+	font-family: $alt-font;
+	font-style: italic;
+	border-left: 8px solid $border-color;
+	padding-left: 20px;
 
-//----------------------------DROID-SERIF
-h1, h2, h3 {
-  font-family: $font-family-droid-serif;
-
+	@media #{$medium} {
+		margin-left: -28px;
+	}
 }
 
-//----------------------------OPEN-SANS
-.contact-form input,
-.contact-form textarea,
-#wrapper {
-  font-family: $font-family-open-sans;
+/* 
+   Code
+   ========================================================================== */
+
+tt, code, kbd, samp, pre {
+	font-family: $code-font;
 }
 
-/*************************************************************************
-                              LETTER SPACING
-/*************************************************************************/
-
-#tag-line,
-.contact-form input[type="submit"],
-h3 {
-  letter-spacing: $l-s-M;
+p > code,
+a > code,
+li > code,
+figcaption > code,
+td > code {
+  margin: 0 2px;
+	padding: 0 5px;
+  @include font-rem(12);
+	line-height: 1.5;
+  border: 1px solid lighten(#000, 90);
+	background-color: lighten(#000, 95);
+	border-radius: 3px;
 }
 
-/*************************************************************************
-                              FONT WEIGHT
-/*************************************************************************/
+pre {
 
-h1, h2, h3 {
-  font-weight: normal;
-}
+	@include font-rem(12);
+	line-height: 1.5;
+	overflow-x: auto;
 
-#logo-name {
-  font-weight: bold;
+	&::-webkit-scrollbar {
+		height: 12px;
+		background-color: #34362e;
+		border-radius: 0 0 4px 4px;
+	}
+
+	&::-webkit-scrollbar-thumb:horizontal {
+		background-color: #6a6d5d;
+		border-radius: 4px;
+	}
 }

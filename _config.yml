@@ -1,99 +1,89 @@
+title:            Denon's Blog
+description:      Personal Blog.
+disqus_shortname: 
+reading_time:     true
+words_per_minute: 200
+# Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
+# When testing locally leave blank or use http://localhost:4000
+url:
 
-##########################################
-#     Change these variables !important
-##########################################
+# Owner/author information
+owner:
+  name:           Denon
+  avatar:         avatar.jpg
+  bio:            "Your bio goes here. It shouldn't be super long but a good sentence or two should suffice."
+  email:          denonw@foxmail.com
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        
+  facebook:       
+  github:         
+  stackexchange:  
+  linkedin:       
+  instagram:      
+  flickr:         
+  tumblr:         
+  # google plus id, include the '+', eg +mmistakes
+  google_plus:
 
-# Set this for Copyright in the footer
-owner: Wu Dahong
+# Background image to be tiled on all pages
+background: 
 
-# Optional quote in the footer
-# To disable set enable to false
-quote:
-  enable: False
-  quote: Some fancy quote.
-  author: John Doe
+# Analytics and webmaster tools stuff goes here
+google_analytics:   
+google_verify:      
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:         
 
-# Set this to your main site title
-# In the head - ff page doesnt have its own title,
-# Site title will be used instead
-title: Denon's Blog
-
-# Description and title below nav in the header
-punch-line: true
-
-# Your logo for the header
-logo:
-  title: 吴达鸿
-  subtitle: Python Developer
-
-include:
-  - pages
-
-# Following needed for disqus integration
-# Set your 'disqus' account name
-disqus:
-
-# Uncomment if deployed locally
-# url: https://localhost:4000
-
-# Set your host if deployed not locally
-# For example "https://yourGitHub.github.io"
-url: "https://Denon.github.io"
-
-# Change this to your base URL starting with forward slash if site is in gh-pages branch
-# For example /branchName
-baseurl: 
-
-assets:
-  sources:
-    - _assets/fonts
-
-# Change this to your google analytics ID
-google_analytics:
-
-# Contact form pupublic key
-contact_PK:
-
-defaults:
-  -
-    scope:
-      path: "tags"
-    values:
-      layout: "tag"
-      description: ""
-##########################################
-#          Optional variables
-##########################################
-
-
-# Set maximum posts per page
-paginate: 5
-
-# Set permalink
-permalink: /:categories/:title
-
-# Set excerpt separator
-truncate_size: 40
-
-##########################################
-#          Do not change these variables
-##########################################
-
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    America/New_York
+future:      false  # publish future dated posts --  true, false (default) 
+highlighter: rouge
+markdown:    kramdown
+gems:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-feed
 sass:
   sass_dir: _sass
-sass:
-    style: compressed
+  style: compressed
 
-include:
-  - pages
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title/
 
-gems:
-  - jekyll-paginate
-  - jekyll-sitemap # add /sitemap.xml file
+# Amount of post to show on home page
+paginate: 5
 
-paginate_path: /_pages/page:num
-
-highlighter: rouge
-markdown: kramdown
 kramdown:
   input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+
+include: 
+  - .htaccess
+exclude: 
+  - "*.less"
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - CHANGELOG
+  - Capfile
+  - Gemfile
+  - Gruntfile.js
+  - LICENSE
+  - README
+  - Rakefile
+  - config
+  - gulpfile.js
+  - lib
+  - log
+  - node_modules
+  - package.json
+  - spec
+  - tmp
