@@ -2,7 +2,7 @@
 layout: page
 title: About Me
 image:
-  feature: test.jpg
+  feature: about.jpg
   credit: Jan Suchý
   creditlink: https://500px.com/photo/39482466/sunset-by-jan-such%C3%BD?utm_source=momentum
 comments: false
